@@ -74,7 +74,8 @@ class MIIServer():
         replica_pool = _allocate_processes(mii_config.hostfile,
                                            mii_config.tensor_parallel,
                                            mii_config.replica_num)
-        if mii_config["deploy_rank"]!=-1 and mii_config.replica_num==1:
+        if mii_config.deploy_rank!=-1 and mii_config.replica_num==1:
+            logger.info(f"LOCAL TEST Deploying on GPU {mii_config.deploy_rank}")
             if isinstance(mii_config["deploy_rank"], int):
                 replica_pool = [(replica_pool[0][0], [mii_config["deploy_rank"]])]
             elif isinstance(mii_config["deploy_rank"], list):
