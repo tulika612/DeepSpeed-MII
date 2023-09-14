@@ -1,9 +1,5 @@
 asyncio
-deepspeed>=0.7.6
-Flask-RESTful
 grpcio
 grpcio-tools
-pydantic
 torch
 transformers
-Werkzeug
