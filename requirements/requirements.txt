@@ -3,3 +3,5 @@ grpcio
 grpcio-tools
 torch
 transformers
+Flask-RESTful
+Werkzeug
